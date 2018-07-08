@@ -1,4 +1,4 @@
-package java.com.cg.ioc;
+package com.cg.ioc;
 
 public class BeanDefinition {
     private Object bean;

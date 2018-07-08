@@ -1,4 +1,4 @@
-package java.com.cg.ioc;
+package com.cg.ioc;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
