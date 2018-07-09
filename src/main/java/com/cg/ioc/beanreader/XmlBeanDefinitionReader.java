@@ -1,6 +1,7 @@
 package com.cg.ioc.beanreader;
 
 import com.cg.ioc.BeanDefinition;
+import com.cg.ioc.BeanReference;
 import com.cg.ioc.PropertyValue;
 import com.cg.ioc.io.ResourceLoader;
 import org.w3c.dom.Document;
@@ -65,18 +66,18 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 Element propertyEle = (Element)node;
                 String name = propertyEle.getAttribute("name");
                 String value = propertyEle.getAttribute("value");
-                beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                if (value != null && value.length() > 0) {
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                } else {
+                    String ref = propertyEle.getAttribute("ref");
+                    if (ref == null || ref.length() == 0) {
+                        throw new IllegalArgumentException("must a ref or value");
+                    }
+
+                    BeanReference beanReference = new BeanReference(ref);
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, beanReference));
+                }
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
