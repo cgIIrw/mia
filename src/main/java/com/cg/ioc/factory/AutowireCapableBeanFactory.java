@@ -1,6 +1,7 @@
 package com.cg.ioc.factory;
 
 import com.cg.ioc.BeanDefinition;
+import com.cg.ioc.BeanReference;
 import com.cg.ioc.PropertyValue;
 
 import java.lang.reflect.Field;
@@ -11,6 +12,7 @@ public class AutowireCapableBeanFactory extends AbstractBeanFactory {
 
             // 这算是组成ioc的关键组成部分之一，因为beanDefinition内部是可以通过字符串创建Class的...
             Object bean = createBeanInstance(beanDefinition);
+            beanDefinition.setBean(bean);
             applyPropertyValues(bean, beanDefinition);
             return bean;
     }
@@ -24,7 +26,12 @@ public class AutowireCapableBeanFactory extends AbstractBeanFactory {
         for (PropertyValue propertyValue : mbd.getPropertyValues().getPropertyValueList()) {
             Field declaredField = bean.getClass().getDeclaredField(propertyValue.getName());
             declaredField.setAccessible(true);
-            declaredField.set(bean, propertyValue.getValue());
+            Object value = propertyValue.getValue();
+            if (value instanceof BeanReference) {
+                BeanReference beanReference = (BeanReference)value;
+                value = getBean(beanReference.getName());
+            }
+            declaredField.set(bean, value);
         }
     }
 }
