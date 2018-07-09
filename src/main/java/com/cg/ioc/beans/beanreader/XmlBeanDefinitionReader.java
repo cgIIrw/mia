@@ -1,8 +1,8 @@
-package com.cg.ioc.beanreader;
+package com.cg.ioc.beans.beanreader;
 
-import com.cg.ioc.BeanDefinition;
-import com.cg.ioc.BeanReference;
-import com.cg.ioc.PropertyValue;
+import com.cg.ioc.beans.BeanDefinition;
+import com.cg.ioc.beans.BeanReference;
+import com.cg.ioc.beans.PropertyValue;
 import com.cg.ioc.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

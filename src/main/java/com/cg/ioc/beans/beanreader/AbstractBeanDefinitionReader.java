@@ -1,6 +1,6 @@
-package com.cg.ioc.beanreader;
+package com.cg.ioc.beans.beanreader;
 
-import com.cg.ioc.BeanDefinition;
+import com.cg.ioc.beans.BeanDefinition;
 import com.cg.ioc.io.ResourceLoader;
 
 import java.util.HashMap;

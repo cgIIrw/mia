@@ -1,6 +1,6 @@
 package com.cg.ioc.context;
 
-import com.cg.ioc.factory.AbstractBeanFactory;
+import com.cg.ioc.beans.factory.AbstractBeanFactory;
 
 public class AbstractApplicationContext implements ApplicationContext{
     protected AbstractBeanFactory beanFactory;

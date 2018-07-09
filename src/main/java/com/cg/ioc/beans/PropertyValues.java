@@ -1,4 +1,4 @@
-package com.cg.ioc;
+package com.cg.ioc.beans;
 
 import java.util.ArrayList;
 import java.util.List;

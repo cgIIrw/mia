@@ -1,9 +1,9 @@
 package com.cg.ioc.context;
 
-import com.cg.ioc.BeanDefinition;
-import com.cg.ioc.beanreader.XmlBeanDefinitionReader;
-import com.cg.ioc.factory.AbstractBeanFactory;
-import com.cg.ioc.factory.AutowireCapableBeanFactory;
+import com.cg.ioc.beans.BeanDefinition;
+import com.cg.ioc.beans.beanreader.XmlBeanDefinitionReader;
+import com.cg.ioc.beans.factory.AbstractBeanFactory;
+import com.cg.ioc.beans.factory.AutowireCapableBeanFactory;
 import com.cg.ioc.io.ResourceLoader;
 
 import java.util.Map;

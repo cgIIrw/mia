@@ -1,4 +1,4 @@
-package com.cg.ioc;
+package com.cg.ioc.beans;
 
 public class BeanReference {
     private String name;

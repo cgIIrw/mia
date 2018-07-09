@@ -1,6 +1,4 @@
-package com.cg.ioc.factory;
-
-import com.cg.ioc.BeanDefinition;
+package com.cg.ioc.beans.factory;
 
 public interface BeanFactory {
     Object getBean(String name) throws Exception;

@@ -1,8 +1,8 @@
-package com.cg.ioc.factory;
+package com.cg.ioc.beans.factory;
 
-import com.cg.ioc.BeanDefinition;
-import com.cg.ioc.BeanReference;
-import com.cg.ioc.PropertyValue;
+import com.cg.ioc.beans.BeanDefinition;
+import com.cg.ioc.beans.BeanReference;
+import com.cg.ioc.beans.PropertyValue;
 
 import java.lang.reflect.Field;
 

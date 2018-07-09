@@ -1,9 +1,8 @@
-package com.cg.ioc.factory;
+package com.cg.ioc.beans.factory;
 
-import com.cg.ioc.BeanDefinition;
+import com.cg.ioc.beans.BeanDefinition;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
