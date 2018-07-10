@@ -1,4 +1,9 @@
 package com.cg.aop;
 
-public class Pointcut {
+public interface Pointcut {
+
+    ClassFilter getClassFilter();
+
+    MethodMatcher getMethodMatcher();
+
 }
