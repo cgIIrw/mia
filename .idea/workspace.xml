@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78f56b97-c5f0-4b03-8d0e-a835770d4227" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cg/aop/AdvisedSupport.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,11 +41,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AopProxy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AopProxy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/aop/AopProxy.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReflectiveMethodInvocation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/aop/ReflectiveMethodInvocation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvisedSupport.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/aop/AdvisedSupport.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -110,27 +139,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeanDefinitionReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/ioc/beans/beanreader/BeanDefinitionReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassPathXmlApplicationContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/ioc/context/ClassPathXmlApplicationContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -171,6 +179,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cg/aop/AopProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cg/aop/TargetSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cg/aop/ReflectiveMethodInvocation.java" />
       </list>
     </option>
   </component>
@@ -191,8 +200,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="335" />
-    <option name="y" value="181" />
+    <option name="x" value="76" />
+    <option name="y" value="441" />
     <option name="width" value="1189" />
     <option name="height" value="705" />
   </component>
@@ -477,7 +486,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="181" width="1189" height="705" extended-state="0" />
+    <frame x="76" y="441" width="1189" height="705" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
@@ -517,23 +526,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/ioc/beans/beanreader/XmlBeanDefinitionReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/ioc/beans/beanreader/AbstractBeanDefinitionReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/ioc/beans/BeanDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -892,8 +884,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/aop/AopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/aop/ReflectiveMethodInvocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cg/aop/AdvisedSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
