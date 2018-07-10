@@ -1,6 +1,6 @@
 package com.cg.aop;
 
-public class PointcutAdvisor {
+public interface PointcutAdvisor extends Advisor {
 
     Pointcut getPointcut();
 }
