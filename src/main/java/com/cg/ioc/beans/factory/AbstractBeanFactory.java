@@ -1,5 +1,6 @@
 package com.cg.ioc.beans.factory;
 
+import com.cg.aop.BeanPostProcessor;
 import com.cg.ioc.beans.BeanDefinition;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         Object bean = beanDefinition.getBean();
         if (bean == null) {
             bean = doCreateBean(beanDefinition);
+            bean = initializeBean(bean, name);
         }
         return bean;
     }
@@ -42,5 +44,48 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         }
     }
 
-    protected abstract Object doCreateBean(BeanDefinition beanDefinition) throws Exception;
+    protected Object createBeanInstance(BeanDefinition beanDefinition) throws Exception {
+        return beanDefinition.getBeanClass().newInstance();
+    }
+
+    protected Object doCreateBean(BeanDefinition beanDefinition) throws Exception {
+        // 这算是组成ioc的关键组成部分之一，因为beanDefinition内部是可以通过字符串创建Class的...
+        Object bean = createBeanInstance(beanDefinition);
+        beanDefinition.setBean(bean);
+        applyPropertyValues(bean, beanDefinition);
+        return bean;
+    }
+
+    protected abstract void applyPropertyValues(Object bean, BeanDefinition mbd) throws Exception;
+
+
+
+    // 添加的aop部分
+    private List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
+
+    protected Object initializeBean(Object bean, String name) throws Exception {
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessors) {
+             bean = beanPostProcessor.postProcessBeforeInitialization(bean, name);
+        }
+
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessors) {
+            bean = beanPostProcessor.postProcessAfterInitialization(bean, name);
+        }
+
+        return bean;
+    }
+
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor) throws Exception {
+        this.beanPostProcessors.add(beanPostProcessor);
+    }
+
+    public List getBeansForType(Class type) throws Exception {
+        List beans = new ArrayList();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            if (type.isAssignableFrom(beanDefinitionMap.get(beanDefinitionName).getBeanClass())) {
+                beans.add(getBean(beanDefinitionName));
+            }
+        }
+        return beans;
+    }
 }

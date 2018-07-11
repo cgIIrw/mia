@@ -22,7 +22,7 @@ public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
     }
 
     @Override
-    public Advice geAdvice() {
+    public Advice getAdvice() {
         return advice;
     }
 }

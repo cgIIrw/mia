@@ -4,5 +4,5 @@ import org.aopalliance.aop.Advice;
 
 public interface Advisor {
 
-    Advice geAdvice();
+    Advice getAdvice();
 }
