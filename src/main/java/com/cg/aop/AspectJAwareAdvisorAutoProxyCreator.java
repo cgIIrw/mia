@@ -11,7 +11,7 @@ public class AspectJAwareAdvisorAutoProxyCreator implements BeanPostProcessor, B
     private AbstractBeanFactory beanFactory;
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws Exception {
-        this.beanFactory = (AbstractBeanFactory)beanFactory;
+        this.beanFactory = ( AbstractBeanFactory)beanFactory;
 
     }
 

@@ -1,0 +1,10 @@
+<beans>
+    <bean name="testDemo" class="com.cg.TestDemo">
+        <property name="cg" value="cgiirw"/>
+        <property name="apple" ref="apple"/>
+    </bean>
+
+    <bean name="apple" class="com.cg.Apple">
+        <property name="color" value="red"/>
+    </bean>
+</beans>
