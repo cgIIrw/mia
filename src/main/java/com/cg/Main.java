@@ -1,9 +1,9 @@
 package com.cg;
 
-import com.cg.aop.Advisor;
-import com.cg.aop.AspectJAwareAdvisorAutoProxyCreator;
-import com.cg.aop.AspectJExpressionPointcut;
-import com.cg.aop.AspectJExpressionPointcutAdvisor;
+import com.cg.aop.advisor.Advisor;
+import com.cg.aop.proxy.AspectJAwareAdvisorAutoProxyCreator;
+import com.cg.aop.pointcut.AspectJExpressionPointcut;
+import com.cg.aop.advisor.AspectJExpressionPointcutAdvisor;
 import com.cg.ioc.beans.BeanDefinition;
 import com.cg.ioc.beans.factory.AbstractBeanFactory;
 import com.cg.ioc.context.ApplicationContext;
@@ -27,7 +27,7 @@ public class Main {
             public Object invoke(MethodInvocation invocation) throws Throwable {
 //                System.out.println("方法执行前...");
                 long startTime = System.currentTimeMillis();
-                Object obj = invocation.proceed();//放行
+                Object obj = invocation.proceed();
 //                System.out.println("方法执行后...");
                 System.out.println(System.currentTimeMillis() - startTime);
                 return obj;

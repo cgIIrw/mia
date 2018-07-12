@@ -1,5 +1,8 @@
-package com.cg.aop;
+package com.cg.aop.advisor;
 
+import com.cg.aop.advisor.PointcutAdvisor;
+import com.cg.aop.pointcut.AspectJExpressionPointcut;
+import com.cg.aop.pointcut.Pointcut;
 import org.aopalliance.aop.Advice;
 
 public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {

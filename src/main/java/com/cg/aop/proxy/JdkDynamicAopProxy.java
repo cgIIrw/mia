@@ -1,5 +1,8 @@
-package com.cg.aop;
+package com.cg.aop.proxy;
 
+import com.cg.aop.AdvisedSupport;
+import com.cg.aop.ReflectiveMethodInvocation;
+import com.cg.aop.proxy.AopProxy;
 import org.aopalliance.intercept.MethodInterceptor;
 
 import java.lang.reflect.InvocationHandler;
@@ -8,7 +11,7 @@ import java.lang.reflect.Proxy;
 
 public class JdkDynamicAopProxy implements AopProxy, InvocationHandler {
 
-    private  AdvisedSupport advised;
+    private AdvisedSupport advised;
 
     public JdkDynamicAopProxy(AdvisedSupport advised) {
         this.advised = advised;

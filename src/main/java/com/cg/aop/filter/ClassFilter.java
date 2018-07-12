@@ -1,4 +1,4 @@
-package com.cg.aop;
+package com.cg.aop.filter;
 
 public interface ClassFilter {
 

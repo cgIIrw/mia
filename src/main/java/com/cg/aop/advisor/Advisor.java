@@ -1,4 +1,4 @@
-package com.cg.aop;
+package com.cg.aop.advisor;
 
 import org.aopalliance.aop.Advice;
 
